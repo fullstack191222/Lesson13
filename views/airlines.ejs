@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class=airlines>
+        <% if (typeof airlines !== 'undefined' && airlines) { %>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Airline</th>
+                    <th>Country</th>
+                    <!-- Add more table headings as needed -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <% airlines.forEach((airline) => { %>
+                    <tr>
+                      <td><%= airline.Name %></td>
+                      <td><%= airline.Country_Id %></td>
+                      <!-- Add more table cells with relevant airline properties -->
+                      <td><button>update</button></td>
+                    </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+        <% } else {%>
+                   <h3>there is no airlines to show</h3> 
+            <% } %>
+    </div>
+
+</body>
+</html>
